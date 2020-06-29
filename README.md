@@ -1,2 +1,3 @@
 # cricket-scoreboard
-Mini project 'cricket scoreboard' using C++ with OOP paradigm
+
+Mini project where a cricket match can be establised and counts the runs, balls & wickets.
