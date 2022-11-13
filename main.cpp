@@ -149,6 +149,7 @@ int main()
 {
 scoreboard first_inn , second_inn;
 
+cout << "ENTER TEAM NAMES:" << endl;
 string teamName;
 cin>>teamName;
 first_inn.set_teamName(teamName);
@@ -159,9 +160,9 @@ if(pos>=0)
 return 0;
 */
 
-cout<<"  VS  ";
+cout << "  VS  ";
 
-cin>>teamName;
+cin >> teamName;
 second_inn.set_teamName(teamName);
 
 //#### player setting ########//
@@ -169,11 +170,13 @@ fstream player("player.txt");
 string p;
 int idx = 1;
 while(!player.eof()){
-getline(player,p);
-if(idx<=11)
-first_inn.set_player(p);
-else second_inn.set_player(p);
-idx++;
+    getline(player,p);
+    if(idx<=11) {
+     first_inn.set_player(p);
+    }else {
+        second_inn.set_player(p);
+    }
+    idx++;
 }
 player.close();
 
